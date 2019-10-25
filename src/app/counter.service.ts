@@ -16,4 +16,7 @@ export class CounterService {
     this.initialValue[position]++;
     return this.initialValue[position];
   }
+  getCounterValue(id:number){
+    
+  }
 }

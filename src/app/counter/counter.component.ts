@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { CounterService } from '../counter.service';
-
+import {Counter} from'../counter';
 @Component({
   selector: 'app-counter',
   templateUrl: './counter.component.html',
