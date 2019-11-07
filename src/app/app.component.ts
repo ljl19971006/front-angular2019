@@ -7,9 +7,10 @@ import { CounterService } from './counter.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(private counterService: CounterService) {}
-
+  constructor(private counterService: CounterService)  {}
+ 
   reset() {
     this.counterService.reset()
   }
 }
+ 

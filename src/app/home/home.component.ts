@@ -12,8 +12,8 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
   }
-  reset(){
-    this.CounterService.reset();
+  reset() {
+    this.CounterService.reset()
   }
 
 }

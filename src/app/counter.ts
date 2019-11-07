@@ -1,6 +1,5 @@
 export class Counter {
-       id: number
+      id: number
       name: string
       value: number
-     
-}
+  }
