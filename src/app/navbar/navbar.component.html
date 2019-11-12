@@ -7,13 +7,13 @@
     <mat-nav-list>
       <a mat-list-item  routerLink="/">Home</a>
       <a mat-list-item  routerLink="/profile" *ngIf="auth.loggedIn">Profile</a>
-      <a mat-list-item  routerLink="/counter/0"*ngIf="auth.loggedIn">counter0</a>
-      <a mat-list-item  routerLink="/counter/1"*ngIf="auth.loggedIn">counter1</a>
-      <a mat-list-item  routerLink="/counter/2"*ngIf="auth.loggedIn">counter2</a>
-      
+      <a mat-list-item  routerLink="/counter/0">counter0</a>
+      <a mat-list-item  routerLink="/counter/1">counter1</a>
+      <a mat-list-item  routerLink="/counter/2">counter2</a>
+      <a mat-list-item (click)="auth.logout()" *ngIf="auth.loggedIn">Log Out</a>
+      <a mat-list-item (click)="auth.login()" *ngIf="!auth.loggedIn">Log In</a>
     </mat-nav-list>
-    <button (click)="auth.logout()" *ngIf="auth.loggedIn">Log Out</button>
-    <button (click)="auth.login()" *ngIf="!auth.loggedIn">Log In</button>
+    
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary">
