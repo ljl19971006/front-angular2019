@@ -1,0 +1,24 @@
+<div class="counter-detail-wrapper">
+    <mat-card class="counter-detail-card" *ngIf="counter">
+        <mat-card-title class="counter-detail-title">
+            <h3>Counter #{{ counter.id }} informations</h3>
+        </mat-card-title>
+        <mat-card-content class="counter-detail-content">
+                <div class="counter-detail-content-element">
+                    <p class="element-title element-title-id">Id</p>
+                    <p class="element-content element-content-id">{{ counter.id }}</p>
+                </div>
+                <div class="counter-detail-content-element">
+                    <p class="element-title element-title-name">Name</p>
+                    <p class="element-content element-content-name">{{ counter.name }}</p>
+                </div>
+                <div class="counter-detail-content-element">
+                    <p class="element-title element-title-value">Value</p>
+                    <p class="element-content element-content-value">{{ counter.value }}</p>
+                   
+                </div>
+               
+        </mat-card-content>
+        
+    </mat-card>
+</div>

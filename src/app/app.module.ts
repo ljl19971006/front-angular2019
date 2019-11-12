@@ -16,13 +16,19 @@ import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProfileComponent } from './profile/profile.component';
 import { AppRoutingModule } from './app-routing.module';
+import { CounterdetailsComponent } from './counterdetails/counterdetails.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     CounterComponent,
     NavbarComponent,
     HomeComponent,
-    ProfileComponent
+    ProfileComponent,
+    CounterdetailsComponent,
+   
+ 
   ],
   imports: [
     BrowserModule,

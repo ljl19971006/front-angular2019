@@ -1,4 +1,3 @@
-
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer class="sidenav" fixedInViewport
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
@@ -6,10 +5,15 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#">Link 1</a>
-      <a mat-list-item href="#">Link 2</a>
-      <a mat-list-item href="#">Link 3</a>
+      <a mat-list-item  routerLink="/">Home</a>
+      <a mat-list-item  routerLink="/profile" *ngIf="auth.loggedIn">Profile</a>
+      <a mat-list-item  routerLink="/counter/0"*ngIf="auth.loggedIn">counter0</a>
+      <a mat-list-item  routerLink="/counter/1"*ngIf="auth.loggedIn">counter1</a>
+      <a mat-list-item  routerLink="/counter/2"*ngIf="auth.loggedIn">counter2</a>
+      
     </mat-nav-list>
+    <button (click)="auth.logout()" *ngIf="auth.loggedIn">Log Out</button>
+    <button (click)="auth.login()" *ngIf="!auth.loggedIn">Log In</button>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary">
@@ -21,13 +25,11 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-            <button (click)="auth.login()" *ngIf="!auth.loggedIn">Log In</button>
-        <button (click)="auth.logout()" *ngIf="auth.loggedIn">Log Out</button>
-    
+         
       <span>counters</span>
     </mat-toolbar>
     <div class="content">
-        <app-home></app-home>
+      <router-outlet></router-outlet>
       </div>
     <!-- Add Content Here -->
   </mat-sidenav-content>
