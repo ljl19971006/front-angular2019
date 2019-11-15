@@ -11,9 +11,7 @@ export class CounterService {
   public positionCounter = [49, 72, 48];
   constructor(private httpClient: HttpClient) { }
 
-  reset() {
-    this.initialValue = [0, 0, 0];
-  }
+ 
 
   increment(id: number): Observable<Counter> {
     /*this.initialValue[position]++;
